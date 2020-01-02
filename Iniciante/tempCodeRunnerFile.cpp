@@ -4,13 +4,27 @@ using namespace std;
 
 int main()
 {
-    double a, b;
-    cin >> a >> b;
+    int v;
+    int mult = 0;
 
-    for (int i = 0; i < 3; i++)
-    {
-       
-        cout << a/b << fixed << setprecision(2) << endl;
-        if (b == 0) cout << "divisao impossivel" << endl;
+    cin >> v;
+    for (int i = 0; i < 10; i++)
+    {    
+        if (i == 0)
+        {
+            cout << "N[" << i << "] = " << v << endl;
+        } 
+        else if (i == 1)
+        {
+        cout << "N[" << i << "] = " << v*v + 1 << endl;
+        v = v* v + 1;        
+        }    
+        else
+        {
+         mult += v * 2;
+         cout << "N[" << i << "] = " << mult << endl;
+         
+        }
     }
+    return 0;
 }
